@@ -8,10 +8,6 @@ public class Main {
         System.out.println("start Main.main");
         System.out.println();
 
-         FirstSample.main(args);
-
-//        InputTest.main(args);
-
         System.out.println();
         System.out.println("end Main.main");
     }

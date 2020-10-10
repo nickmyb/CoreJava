@@ -2,6 +2,9 @@ import java.time.*;
 
 /**
  * This program tests the Employee class.
+ *
+ * one .java file can only have one public class!
+ *
  * @version 1.12 2015-05-08
  * @author Cay Horstmann
  */
@@ -33,6 +36,9 @@ class Employee
    private double salary;
    private LocalDate hireDay;
 
+   /**
+    * 只有在不提供任意Constructor才会提供一个默认的无参数的Constructor
+     */
    public Employee(String n, double s, int year, int month, int day)
    {
       name = n;
@@ -50,6 +56,8 @@ class Employee
       return salary;
    }
 
+   // Be careful not to write accessor methods that return references to mutable objects, you should clone it first
+   // accessor method 不要返回可变对象, 应该先调用.clone()
    public LocalDate getHireDay()
    {
       return hireDay;
