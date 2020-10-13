@@ -11,6 +11,8 @@ public class MethodTableTest
 {
    public static void main(String[] args) throws Exception
    {
+      // 更建议使用interface而不是Method
+
       // get method pointers to the square and sqrt methods
       Method square = MethodTableTest.class.getMethod("square", double.class);
       Method sqrt = Math.class.getMethod("sqrt", double.class);

@@ -1,5 +1,8 @@
 package abstractClasses;
 
+/**
+ * a class with one or more abstract methods must itself be declared abstract
+ */
 public abstract class Person
 {
    public abstract String getDescription();

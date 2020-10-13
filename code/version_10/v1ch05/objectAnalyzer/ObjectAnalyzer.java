@@ -12,6 +12,8 @@ public class ObjectAnalyzer
 
    /**
     * Converts an object to a string representation that lists all fields.
+    * 打印object的好方法
+    *
     * @param obj an object
     * @return a string with the object's class name and all field names and
     * values

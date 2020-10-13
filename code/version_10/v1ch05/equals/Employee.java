@@ -37,6 +37,15 @@ public class Employee
       salary += raise;
    }
 
+   /**
+    * 标准equals:
+    *
+    * 1. 是否指向相同对象
+    * 2. 传入对象是否为null
+    * 3. 对象所属类是否相同, getClass(有子类要重写), instanceof(final)
+    * 4. 对象间比较
+    */
+   @Override
    public boolean equals(Object otherObject)
    {
       // a quick test to see if the objects are identical
@@ -57,6 +66,7 @@ public class Employee
 
    public int hashCode()
    {
+      // hashCode要和equals对应
       return Objects.hash(name, salary, hireDay); 
    }
 

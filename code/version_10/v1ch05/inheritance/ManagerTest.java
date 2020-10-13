@@ -22,7 +22,14 @@ public class ManagerTest
       staff[2] = new Employee("Tommy Tester", 40000, 1990, 3, 15);
 
       // print out information about all Employee objects
+      // The fact that an object variable (such as the variable e) can refer to multiple actual types is called polymorphism.
+      // Automatically selecting the appropriate method at runtime is called dynamic binding
       for (Employee e : staff)
          System.out.println("name=" + e.getName() + ",salary=" + e.getSalary());
+
+      // check before cast
+      if (staff[0] instanceof Manager) {
+         boss = (Manager) staff[0];
+      }
    }
 }

@@ -33,6 +33,7 @@ public class CopyOfTest
     */
    public static Object[] badCopyOf(Object[] a, int newLength) // not useful
    {
+      // 返回类型是Object[],无法被强转为T[]
       Object[] newArray = new Object[newLength];
       System.arraycopy(a, 0, newArray, 0, Math.min(a.length, newLength));
       return newArray;
@@ -45,12 +46,13 @@ public class CopyOfTest
     * type array
     * @return a larger array that contains all elements of a.
     */
-   public static Object goodCopyOf(Object a, int newLength) 
+   public static Object goodCopyOf(Object a, int newLength)
    {
       Class cl = a.getClass();
       if (!cl.isArray()) return null;
       Class componentType = cl.getComponentType();
       int length = Array.getLength(a);
+      // 实际返回是componentType[],只是强转为Object返回
       Object newArray = Array.newInstance(componentType, newLength);
       System.arraycopy(a, 0, newArray, 0, Math.min(length, newLength));
       return newArray;

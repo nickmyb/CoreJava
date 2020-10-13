@@ -2,6 +2,10 @@ package inheritance;
 
 import java.time.*;
 
+/**
+ * final class无法被继承, final method无法被override
+ * All methods in a final class are automatically final
+ */
 public class Employee
 {
    private String name;

@@ -24,6 +24,7 @@ public class Employee extends Person
       return hireDay;
    }
 
+   @Override
    public String getDescription()
    {
       return String.format("an employee with a salary of $%.2f", salary);
