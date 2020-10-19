@@ -22,6 +22,8 @@ class ArrayAlg
 {
    /**
     * A pair of floating-point numbers
+    *
+    * static inner class don't have a reference to the outer class object.
     */
    public static class Pair
    {

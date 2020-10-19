@@ -33,6 +33,8 @@ class TalkingClock
     * Starts the clock.
     * @param interval the interval between messages (in milliseconds)
     * @param beep true if the clock should beep
+    *
+    * new Object(){}.getClass().getEnclosingClass(): 静态方法获取当前所在类
     */
    public void start(int interval, boolean beep)
    {

@@ -53,6 +53,7 @@ class TalkingClock
       t.start();
    }
 
+   // inner class 绑定了一个外部类的实例
    public class TimePrinter implements ActionListener
    {
       public void actionPerformed(ActionEvent event)

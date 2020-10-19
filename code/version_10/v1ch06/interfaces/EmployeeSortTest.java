@@ -17,7 +17,13 @@ public class EmployeeSortTest
       staff[1] = new Employee("Carl Cracker", 75000);
       staff[2] = new Employee("Tony Tester", 38000);
 
-      Arrays.sort(staff);
+      // Arrays.sort(Object[] not Comparable[])
+      // Arrays.sort(staff);
+
+      // method reference是functional interface,Comparator.comparing才是Comparator
+      // Arrays.sort(staff, Comparator.comparing(Employee::getName));
+      Arrays.sort(staff, Comparator.comparing(Employee::getName, Comparator.nullsFirst(Comparator.naturalOrder())));
+
 
       // print out information about all Employee objects
       for (Employee e : staff)

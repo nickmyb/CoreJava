@@ -3,6 +3,9 @@ package clone;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * 实现clone的类需要implements Cloneable然后上升为public并且throws CloneNotSupportedException(final class除外)
+ */
 public class Employee implements Cloneable
 {
    private String name;

@@ -7,6 +7,10 @@ import javax.swing.Timer;
 
 /**
  * This program demonstrates the use of lambda expressions.
+ *
+ * 1. functional interface: an interface with a single abstract method is expected
+ * 2. free variables: In a lambda expression, you can only reference variables whose value doesn’t change, lambda内外都不能对free variables做修改
+ *
  * @version 1.0 2015-05-12
  * @author Cay Horstmann
  */
