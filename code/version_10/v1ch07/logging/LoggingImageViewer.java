@@ -15,6 +15,7 @@ public class LoggingImageViewer
 {
    public static void main(String[] args)
    {
+      // Ensures that all messages are logged to an application-specific file
       if (System.getProperty("java.util.logging.config.class") == null
             && System.getProperty("java.util.logging.config.file") == null)
       {

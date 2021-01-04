@@ -5,6 +5,16 @@ import java.util.*;
 /**
  * @version 1.11 2012-01-26
  * @author Cay Horstmann
+ *
+ * unchecked exception: Error + RuntimeException
+ *
+ * 如果finally产生新异常,则会丢失老异常; finally和try都包含return,finally的return会在try的return前执行
+ *
+ * Try-with-Resources Statement:
+ * 正常退出或异常r.close()都会被自动调用
+ * try (Resource r1 = . . .; Resource r2 = . . .) {
+ *     work with res
+ * }
  */
 public class ExceptionalTest
 {
